@@ -27,7 +27,10 @@ namespace CALCULADORA
         {
             operador = "+";
             Num1 = Convert.ToDouble(textBox1.Text);
-            textBox1.Text = "0";
+            textBox1.Text = "+";
+            
+
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -35,7 +38,7 @@ namespace CALCULADORA
         {
             operador = "/";
             Num1 = Convert.ToDouble(textBox1.Text);
-            textBox1.Text = "0";
+            textBox1.Text = "";
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -151,7 +154,7 @@ namespace CALCULADORA
         {
             operador = "-";
             Num1 = Convert.ToDouble(textBox1.Text);
-            textBox1.Text = "0";
+            textBox1.Text = "";
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -159,7 +162,7 @@ namespace CALCULADORA
         {
             operador = "*";
             Num1 = Convert.ToDouble(textBox1.Text);
-            textBox1.Text = "0";
+            textBox1.Text = "";
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -187,6 +190,37 @@ namespace CALCULADORA
                     textBox1.Text = $"{Num1 * Num2}";
                     break;
             }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        //punto
+        {
+            if (textBox1.Text == "0") textBox1.Text = "";
+            textBox1.Text = textBox1.Text + ".";
+
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        //%
+        {
+            textBox1.Text = textBox1.Text + "%";
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "( ";
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+
+            textBox1.Text = textBox1.Text + ",";
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + " )";
+
         }
     }
 }
